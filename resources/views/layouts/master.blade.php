@@ -21,10 +21,10 @@
     <div class="wrapper">
     <section class="sidebar">
         <div class="logo">
-            <img src="../assests/img/mypadi-logo2.png" alt="">
+            <img src="{{ asset('dashboard/img/mypadi-logo2.png')}}" alt="">
         </div>
         <div class="profile-info_container text-center">
-            <img src="../assests/img/profile-pic.jpg" alt="profile-pic" class="profile-pic">
+            <img src="{{ asset('dashboard/img/profile-pic.jpg')}}" alt="profile-pic" class="profile-pic">
             <h4 class="profile-name">Joshua Edigbe</h4>
         </div>
         <div class="sidebar-nav_container">

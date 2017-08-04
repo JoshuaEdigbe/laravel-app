@@ -33,11 +33,11 @@ ul,ol,li{
     border-radius: 2px !important;
     outline: 0;
     border: 0;
-    box-shadow: none;
+    box-shadow: none !important;
 }
 .form-control:focus,.dataTables_filter label input:focus,.dataTables_length label select:focus{
     border:1px solid  rgba(25,92,90,0.9) !important;
-    box-shadow: none;
+    box-shadow: none !important; 
 }
 
 .box-white{
@@ -144,3 +144,377 @@ ul,ol,li{
 }
 
 
+.login-wrapper{
+    display: flex;
+    height: 100vh;
+    background-size: cover;
+} 
+
+.login-wrapper > .first-sub_wrapper,.login-wrapper > .second-sub_wrapper{
+    height: 100vh;
+}
+
+.login-wrapper > .first-sub_wrapper{
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+.login-wrapper > .second-sub_wrapper > .logo > img{
+    width: 206px;
+    position: relative;
+    top: 39px;
+    margin-left: auto;
+    display: block;
+    margin-right: auto;
+} 
+.login-wrapper > .second-sub_wrapper > .login_form {
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: 80px; 
+} 
+
+.login-wrapper >.second-sub_wrapper > .login_form md-card{
+    background-color: #fff;
+}
+.login-wrapper > .second-sub_wrapper{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.login-wrapper > .second-sub_wrapper > .inner{
+    flex: 1;
+    height: 100vh;
+}
+
+@media screen and (min-width: 769px){
+    .login-wrapper > .second-sub_wrapper{
+        flex: 3;
+    }
+    .login-wrapper > .first-sub_wrapper{
+        flex: 2;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .login-wrapper > .first-sub_wrapper{
+            flex: 1;
+        }
+        .login-wrapper > .second-sub_wrapper{
+            display: none;
+        }
+}
+
+
+.login-wrapper{
+    display: flex;
+    height: 100vh;
+    background-image: url("../assests/img/mp-bg.jpg");
+    background-size: cover;
+} 
+ .login-wrapper > .first-sub_wrapper{
+    background-color: #fff;
+}
+.login-wrapper > .first-sub_wrapper >.login-form_container >form >.login-with-label_container{
+    position: relative;
+    top: -19px;                    
+}
+.login-wrapper > .first-sub_wrapper >.login-form_container >form >.login-with-label_container> .alt-label{
+    font-size: 13px;
+}
+.login-wrapper > .first-sub_wrapper >.login-form_container >form > .divide-text{
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    top: -32px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.login-wrapper > .first-sub_wrapper >.login-form_container >form > .divide-line{
+    width: 70%;
+    margin: 20px auto;
+    margin-top: 40px;
+}
+.login-wrapper > .first-sub_wrapper >.login-form_container >form > .forget-password-link{
+    font-size: 13px;
+}
+.login-wrapper > .first-sub_wrapper >.login-form_container {
+    margin: auto;
+    margin-bottom: 50px;
+    position: relative
+} 
+.login-wrapper > .first-sub_wrapper >.logo > img{
+    width: 160px;
+    position: relative;
+    display: block;
+    margin: 30px auto;
+}
+.login-wrapper > .first-sub_wrapper >.second-sub_wrapper{
+    display: flex;
+    background-color: rgba(25,92,90,0.7);
+}
+.login-wrapper > .first-sub_wrapper >.second-sub_wrapper >.inner{
+    flex: 1;
+    height: 100vh;
+}
+
+.login-wrapper >.first-sub_wrapper,.login-wrapper> .second-sub_wrapper{
+    height: 100vh;
+}
+
+@media screen and (min-width: 769px){
+    .login-wrapper > .first-sub_wrapper{
+        flex: 2;
+    }
+    .login-wrapper > .first-sub_wrapper > .login-form_container{
+        width: 70%;
+    }
+    .login-wrapper > .second-sub_wrapper{
+        flex: 3;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .login-wrapper > .first-sub_wrapper{
+        flex: 1;
+        overflow-y: scroll;            
+    }
+    .login-wrapper > .login-form_container{
+            width: 80%;
+        } 
+        .login-wrapper >.second-sub_wrapper{
+        display: none;
+    }
+}
+
+
+/*Dashboard Sidebar*/
+
+ul.sidebar-nav-cont{
+    margin-top: 30px;
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+}
+
+
+ul.sidebar-nav-cont li.active {
+    border-left: 3px solid #65c728;
+}
+
+ul.sidebar-nav-cont li a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 9px 0px;
+    font-size: 14px;
+    transition: 0.2s;    
+}
+
+ul.sidebar-nav-cont li a:hover,ul.sidebar-nav-cont li a:focus{
+    background-color: #1c5f59;
+    color: #65c728;
+}
+
+ul.sidebar-nav-cont li a > span{
+   display: inline-block;
+}
+
+ul.sidebar-nav-cont li a > span:first-child {
+    width: 30px;
+    margin-left: 20px;
+}
+
+ul.sidebar-nav-cont li.has-sub > a > span:last-child{
+    position: absolute;
+    right: 10px;
+}
+
+ul.sidebar-nav-cont li.has-sub > ul{
+    background: #0e3a38;
+    display: none;
+}
+
+ul.sidebar-nav-cont li.has-sub > ul > li > a{
+    font-size: 12px;
+}
+
+ul.sidebar-nav-cont li.has-sub > ul > li > a > span:first-child{
+    margin-left: 53px;
+}
+
+
+.notify-badge {
+    background: #65c728;
+    padding: 0px 11px;
+    position: absolute;
+    right: 13px;
+    font-size: 12px;
+    top: 10px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.dataTables_wrapper{
+    margin-top: 30px;
+}
+
+table.dataTable.no-footer{
+    border-bottom: 0px !important;
+}
+
+.dataTables_filter label input{
+    padding-left: 20px;
+}
+
+.dataTables_length label select{
+    width: 65px;
+}
+
+.dataTables_length label select,.dataTables_filter label input{
+    height: 30px !important;
+    transition: 0.3s;
+    background-color: #f3f3f3;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current{
+    background: #8cc43f !important;
+    color: #fff;
+    border: 0 !important;
+}
+.dataTables_wrapper .dataTables_info{
+    padding-top: 0.955em !important;
+}
+
+.dataTables_wrapper .dataTables_paginate{
+    padding-top: 0.95em !important;
+}
+table.dataTable thead th, table.dataTable thead td{
+    border-bottom: 0px !important;
+    background: #f3f3f3;
+    font-size: 15px;
+}
+
+tbody{
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+}
+
+.table > tbody > tr > td{
+    border-top: 1px solid #f3f3f3;
+}
+.no-table-data{
+    padding: 30px 0px;
+}
+
+.wrapper {
+    display: flex;
+    padding-top: 50px;
+    height: 100vh;
+}
+
+.wrapper > .sidebar{
+    flex: 0 280px;
+    height: 100%; 
+    position: relative; 
+    overflow-y: scroll;          
+}
+
+.wrapper > .sidebar > .logo{
+    width: 80px;
+    margin: 0 auto;
+}
+
+.wrapper > .sidebar > .profile-info_container{
+    margin-top: 50px;
+}
+
+.wrapper > .sidebar > .profile-info_container > .profile-pic{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.wrapper > .sidebar > .profile-info_container > .profile-name{
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.wrapper .page-content_container{
+    flex: 1;
+    background: #fafafa;
+    border-top-left-radius: 20px;
+    overflow-y: scroll;
+    padding: 30px;       
+}
+
+.wrapper .page-content_container > .table{
+    margin-top: 30px;
+} 
+
+@media screen and (min-width: 769px){ 
+    .wrapper .dataTables_wrapper .dataTables_filter{
+        margin-bottom: 12px;
+    }
+    .wrapper .toogle-btn{
+        display: none;
+    }
+    .dataTables_length{
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wrapper {
+        padding-top: 0;
+    }
+    .wrapper .toogle-btn{
+        position: absolute;
+        right: 15px;
+        top: 12px;
+        z-index: 10;
+        background-color: #195c5a;
+    }
+
+    .wrapper .toogle-btn:hover{
+        color: #fff;
+    }
+
+    .wrapper > .sidebar{
+        position: absolute;
+        left: -250px;
+        overflow-y: scroll;            
+    }
+
+    .wrapper > .sidebar > .logo{
+        position: relative;
+        top: 17px;
+        } 
+
+    .wrapper > .sidebar.open{
+        transition: 0.3s;
+        position: relative;
+        left: 0;
+    }
+
+    .wrapper > .page-content_container{
+        border-radius: 0px;
+        font-size: 15px;
+        padding: 0px 15px;
+        transition: 0.3s;
+    }
+
+    .wrapper > .page-content_container > .pane-white{
+            margin-top: 60px;
+    }
+
+    .wrapper > .page-content_container > .page-header{
+        margin-top: 27px;
+        font-size: 29px;
+    }
+
+    .wrapper > .page-content_container > .table-responsive{
+        margin-top: 30px;
+    }
+}

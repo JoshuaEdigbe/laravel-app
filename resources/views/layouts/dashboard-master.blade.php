@@ -6,14 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MyPadi | @yield('title')</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="{{ asset('dashboard/css/dashboard.css')}}">
-    <link rel="stylesheet" href="{{ asset('dashboard/css/manage-users.css')}}">
-    <link rel="stylesheet" href="{{ asset('dashboard/css/styles.css')}}">
+    @include('includes.css-global-links')
     
     
 </head>
@@ -31,39 +24,39 @@
             <ul class='sidebar-nav-cont'>
                 <li>
                     <a href="">
-                        <span><i class="zmdi zmdi-chart"></i></span>
+                        <span><i class="dashboard icon"></i></span>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <span><i class="zmdi zmdi-settings"></i></span>
+                        <span><i class="setting icon"></i></span>
                         <span>Account Settings</span>
                     </a>
                 </li>
 
                 <li class="has-sub">
                     <a href="">
-                        <span><i class="zmdi zmdi-home"></i>    </span>
+                        <span><i class="home icon"></i>    </span>
                         <span>Hostel Listing</span>
-                        <span><i class="zmdi zmdi-chevron-down"></i></span>
+                        <span><i class="chevron down icon"></i></span>
                     </a>
                     <ul>
                         <li>
-                            <a href="./listing.html">
-                                <span><i class="zmdi zmdi-eye"></i></span>
+                            <a href="">
+                                <span><i class="list icon"></i></span>
                                 <span>View Listing</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <span><i class="fa fa-home"></i></span>
+                                <span><i class="home icon"></i></span>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <span><i class="fa fa-home"></i></span>
+                                <span><i class="home icon"></i></span>
                                 <span>Dashboard</span>
                             </a>
                         </li>
@@ -72,26 +65,26 @@
                 </li>
                 <li class="has-sub">
                     <a href="">
-                        <span><i class="zmdi zmdi-home"></i></span>
+                        <span><i class="home icon"></i></span>
                         <span>Hostel Listing</span>
-                        <span><i class="zmdi zmdi-chevron-down"></i></span>
+                        <span><i class="chevron down icon"></i></span>
                     </a>
                     <ul>
                         <li>
                             <a href="">
-                                <span><i class="zmdi zmdi-home"></i></span>
+                                <span><i class="home icon"></i></span>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <span><i class="zmdi zmdi-home"></i></span>
+                                <span><i class="home icon"></i></span>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <span><i class="zmdi zmdi-home"></i></span>
+                                <span><i class="home icon"></i></span>
                                 <span>Dashboard</span>
                             </a>
                         </li>
@@ -99,14 +92,14 @@
                 </li>
                 <li>
                     <a href="">
-                        <span><i class="zmdi zmdi-notifications-active"></i></span>
+                        <span><i class="alarm outline icon"></i></span>
                         <span>Notifications</span>
                         <span class="notify-badge">3</span>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <span><i class="zmdi zmdi-receipt"></i></span>
+                        <span><i class="credit card alternative icon"></i></span>
                         <span>Transactions</span>
                     </a>
                 </li>
@@ -123,36 +116,8 @@
 <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<script src="./dashboard.js"></script>
-<script>
-    $(function(){
-        $('ul.sidebar-nav-cont > li > a').on('click',function(e) {
-            e.preventDefault();
-        	$('.sidebar-nav-cont li').removeClass('active');
-            $(this).closest('li').addClass('active');	
-            var checkElement = $(this).next();
-            if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-                $(this).closest('li').removeClass('active');
-                checkElement.slideUp('normal');
-            }
-            if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-                $('ul.sidebar-nav-cont ul:visible').slideUp('normal');
-                checkElement.slideDown('normal');
-            }
-            if($(this).closest('li').find('ul').children().length == 0) {
-                return true;
-            } else {
-                return false;	
-            }
-        });
-
-        $('#sidebar-toggle-btn').on('click', function(e){
-            e.preventDefault()
-            $('.sidebar').toggleClass('open')
-          })
-    })
-</script>
-
-
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+<script src="{{asset('js/custom.js')}}"></script>
 </body>
 </html>

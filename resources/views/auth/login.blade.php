@@ -6,7 +6,7 @@
             <img src="{{asset('dashboard/img/mypadi-logo2.png')}}" alt="MyPadi_Logo">
         </div>
         <div class="login-form_container pane-white text-center">
-            <form action="{{ url('login') }}" method="post">
+            <form action="{{ url('login') }}" method="get">
                 {{csrf_field()}}
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <input id="email" type="email" class="form-control" placeholder="Email or Phone Number" name="email" value="{{ old('email') }}" required autofocus>
@@ -15,7 +15,7 @@
                     <input type="password" name="password" class="form-control" placeholder="Password">
                 </div>
                 <div class="form-group">
-                    <input type="submit" role="button" class="btn btn-lg btn-block btn-secondary" href="/dashboard" value="LOGIN">
+                    <a href="/manage-users" class="btn btn-secondary btn-block">LOGIN</a>
                 </div>
                 <br>
 
@@ -45,6 +45,7 @@
     </section>
     <section class="second-sub_wrapper">
         <div class="inner">
+            <p class="pull-right"> Don't have an account ? <a href="/register" class="btn btn-success">Sign</a></p>
         </div>
     </section>
 </div>
